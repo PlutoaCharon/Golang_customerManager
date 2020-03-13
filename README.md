@@ -2,7 +2,8 @@
 
 > 基于Golang的简单文本界面客户关系管理系统
 
-`customerView.go`
+
+`view.customerView.go`
 - 显示界面
 - 接收用户的输入
 - 根据用户的输入，调用`customerService`的方法完成客户的管理
@@ -13,7 +14,7 @@ delete 方法 调用 customerService 的Delete方法, 完成客户删除
 update 方法调用 customerService 的Update方法, 完成客户修改
 ```
 
-`customerService`
+`service.customerService`
 - 完成对用户的各种操作
 - 对客户的增，删除，修改，显示
 - 会声明一个customer的切片
@@ -26,7 +27,7 @@ FindById(id int)  返回id号对应的切片的下标
 Update(id int, customer model.Customer) 修改客户
 ```
 
-`customer` 
+`model.customer` 
 - 表示一个客户
 - 客户各种字段
 ```
