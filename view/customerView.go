@@ -30,7 +30,7 @@ func (cv *customerView) list() {
 func (c *customerView) update() {
 	fmt.Println("请输入待修改的客户编号(-1)退出:")
 	id := -1
-	fmt.Scanln(&id)
+	_, _ = fmt.Scanln(&id)
 	if id == -1 {
 		return //放弃删除操作
 	}
@@ -61,14 +61,14 @@ func (c *customerView) delete() {
 	fmt.Println("---------------------删除客户---------------------")
 	fmt.Println("请选择待删除客户编号(-1退出)：")
 	id := -1
-	fmt.Scanln(&id)
+	_, _ = fmt.Scanln(&id)
 	if id == -1 {
 		return //放弃删除操作
 	}
 	fmt.Println("确认是否删除(Y/N)：")
 	//这里同学们可以加入一个循环判断，直到用户输入 y 或者 n,才退出..
 	choice := ""
-	fmt.Scanln(&choice)
+	_, _ = fmt.Scanln(&choice)
 	if choice == "y" || choice == "Y" {
 		//调用customerService 的 Delete方法
 		if c.customerService.Delete(id) {
@@ -83,7 +83,7 @@ func (c *customerView) delete() {
 func (c *customerView) exit() {
 	fmt.Println("确认是否退出(Y/N):")
 	for {
-		fmt.Scanln(&c.key)
+		_, _ = fmt.Scanln(&c.key)
 		if c.key == "Y" || c.key == "N" || c.key == "y" || c.key == "n" {
 			break
 		}
@@ -128,7 +128,7 @@ func (cv *customerView) mainMenu() {
 		fmt.Println("                  5 退   出")
 		fmt.Print("请选择(1-5)：")
 
-		fmt.Scanln(&cv.key)
+		_, _ = fmt.Scanln(&cv.key)
 		switch cv.key {
 		case "1":
 			cv.add()
