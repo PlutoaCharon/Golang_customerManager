@@ -2,11 +2,13 @@
 
 > 基于Golang的简单文本界面客户关系管理系统
 
+运行:`go run $GOPATH/customerManager(存放该项目的文件夹)/view/customerView.go`
+
 
 `view.customerView.go`
 - 显示界面
 - 接收用户的输入
-- 根据用户的输入，调用`customerService`的方法完成客户的管理
+- 根据用户的输入，调用`cust   omerService`的方法完成客户的管理
 ```
 list 去调用 customerService 的List方法，并显示客户列表
 add 方法去调用 customerService 的Add方法, 完成客户添加
